@@ -12,7 +12,8 @@ The Mechanics of our the algorithm:
 1) start in the bottom left corner of the matrix
 2) if the value at that index is larger than the target, move up a row 
 3) Otherwise, move right across the column
-4) Repeat steps 2-3 on whatever element it is currently on, until the target is found
+4) Repeat steps 2-3 on whatever element it is currently on, until the target is found, then return the coordinates of the vaule
+5) If not, return (-1,-1)
 
 # Experiment methodology
 For our experiment, we wanted to test the runtime of our algorithm as the n x n matrix increases in size. 
@@ -34,6 +35,7 @@ Our method get average returned the average time it takes for the search algorit
 ![alt text](screenshots/result.png "")
 
 # Conclusion
-Based on our results, we can conclude that the algorithm is indeed O(n) runtime. As the size of the 
-matrix increases, the resulting line steadily increases at a linear rate for most of the tests. However,
-near the end the data begins to be a bit random, spiking up them falling down again. 
+Based on our results, we can conclude that the algorithm is indeed O(n) runtime for the worst and middle cases. As the size of the 
+matrix increases, the resulting line steadily increases at a linear rate for both the worst case and middle case scenarios. 
+However, towards the end of the data, the line becomes a bit random, spiking up and back down. Despite the few ocassional spikes,
+the line is generally constant. 

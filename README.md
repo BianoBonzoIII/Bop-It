@@ -25,11 +25,12 @@ For example, in a 3 x 3 matrix, the elements would be <br />
 | 4 5 6 | <br />
 | 7 8 9 | <br />
 
-Our method get average returned the average time it takes for the search algorithm to find its value in a given matrix. We tested 
+Our method get average returned the average time it takes for the search algorithm to find its value in a given matrix. 
 
+Procedure:
 1) start with a 1,000 x 1,000 matrix
 2) find the average runtime of the best, worst, and middle case for the matrix, inputting it into the csv file. 
-3) Repeat step 2 on each matrix with size increasing by 100, up to 10,000. 
+3) Repeat step 2 on each matrix with size increasing by 100, up to size 10,000 x 10,000. 
 
 # Results
 ![alt text](screenshots/result.png "")

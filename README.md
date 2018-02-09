@@ -20,9 +20,9 @@ First, We created two methods, populate and getAverage. Method populate fills a 
 increasing by 1, starting at 1. 
 
 For example, in a 3 x 3 matrix, the elements would be 
-| 1 2 3 |
-| 4 5 6 |
-| 7 8 9 |
+| 1 2 3 | <br />
+| 4 5 6 | <br />
+| 7 8 9 | <br />
 
 Our method get average returned the average time it takes for the search algorithm to find its value in a given matrix. We tested 
 

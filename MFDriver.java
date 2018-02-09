@@ -6,6 +6,7 @@
   2018-02-08
 */
 
+// printing to csv is just java MFDriver > results.csv
 public class MFDriver {
 
     //populates a matrix
@@ -23,15 +24,18 @@ public class MFDriver {
     
     //runs matrixSearch 1 million times, calculate the average run time, and 
     //send that data to a csv file
-    public static long getAverage (int[][] arr, int target) { 
+    public static long getAverage (int[][] arr, int target, int iterCnt) { 
+
 	long sum = 0;
-	for (int x = 0; x < 1000000; x++) {
+
+	for (int x = 0; x < iterCnt; x++) {
+
 	    long startTime = System.nanoTime();
 	    MatrixFinder.matrixSearch(arr, target);
 	    long endTime = System.nanoTime();
 	    sum += (startTime - endTime);
 	}
-	long averageTime = (long) (sum / 1000000.0);
+	long averageTime = (long) (sum / iterCnt);
 	return averageTime;
     }
 
@@ -40,20 +44,28 @@ public class MFDriver {
 	/************
          a few lines of csv file stuff will go in between each of those 3 sections
 	 *********/
-        for (int x = 1000; x < 10000; x+=100) {
+
+	System.out.println("best,middle,worst");
+	//
+	long best, middle, worst;
+	for (int x = 1000; x < 10000; x+=100) {
+
 	    int[][] array = populateArray(x);
+
 	    // =============== Best ===============
-	    getAverage( array, (array[x-1][0]) );
+	    best = getAverage( array, (array[x-1][0]), 10 );
+
+	    //print under best column.. etc.
 	    // ====================================
 	    
 	    // =============== Middle ===============
-	    getAverage( array, (array[x/2][x/2]) );
+	    middle = getAverage( array, (array[x/2][x/2]), 10);
 	    // ====================================
 
 	    // =============== Worst ===============
-	    getAverage( array, (array[0][x-1]) );
+	    worst = getAverage( array, (array[0][x-1]), 10);
 	    // ====================================
-	    
+	    System.out.printf("%s,%s,%s\n",best,middle,worst);
 	}
     }
 }

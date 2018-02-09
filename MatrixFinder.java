@@ -23,6 +23,7 @@ import java.util.Arrays;
 
 public class MatrixFinder {
 
+    //made void so it runs but does not return anything
     public static String matrixSearch(int[][] matrix, int target) {
         
         //tracking location
@@ -33,25 +34,25 @@ public class MatrixFinder {
         int y = -1;
         while (c < matrix.length && r >= 0) {
             int val = matrix[r][c];
-            System.out.print(String.format("(%s,%s) (%s,%s)", r, c, x, y));
+            //System.out.print(String.format("(%s,%s) (%s,%s)", r, c, x, y));
             if (target == matrix[r][c]) {
                 x = c;
                 y = r;
                 break;
             } else if (val < target) {
                 c++;
-                System.out.print(" go left ");
+                //System.out.print(" go left ");
             } else if (val > target) {
                 r--;
-                System.out.print(" go up ");
+                //System.out.print(" go up ");
             }
-            System.out.println();
+            //System.out.println();
         }
-        System.out.println();
+	// System.out.println();
         return String.format("(row: %s, col: %s)", y, x);
     }
 
-    public static void main(String[] args) {
+    /* public static void main(String[] args) {
         // ========== Worst Case Scenario Test Case ==========
         // Requires 4 runs
         int[][] worst = {
@@ -64,8 +65,8 @@ public class MatrixFinder {
 	   | 3 4 17 |
 	   | 4 5 26 |
 	*/
-        System.out.println(matrixSearch(worst, 16)); // Should return (1, 3)
-
+    //System.out.println(matrixSearch(worst, 16)); // Should return (1, 3)
+    /*
         // ========== Best Case Scenario Test Case ==========
         // Requires 1 run
         int[][] best = {
@@ -80,8 +81,8 @@ public class MatrixFinder {
 	   | 16 18 20 22  |
 	   | 25 28 30 35  |
 	*/
-        System.out.println(matrixSearch(best, 25));
-
+    //System.out.println(matrixSearch(best, 25));
+    /*
         // ========== Middle Case Scenario Test Case ==========
         // Requires 2 runs
         int[][] mid = {
@@ -94,9 +95,10 @@ public class MatrixFinder {
 	   | 4 6 7 |
 	   | 5 7 8 |
 	*/
-        System.out.println(matrixSearch(mid, 6));
-    }
+    //System.out.println(matrixSearch(mid, 6));
 }
+//}
+
 
 
 

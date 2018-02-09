@@ -19,7 +19,7 @@ For our experiment, we wanted to test the runtime of our algorithm as the n x n 
 First, We created two methods, populate and getAverage. Method populate fills a matrix with consecutive integers 
 increasing by 1, starting at 1. 
 
-For example, in a 3 x 3 matrix, the elements would be 
+For example, in a 3 x 3 matrix, the elements would be <br />
 | 1 2 3 | <br />
 | 4 5 6 | <br />
 | 7 8 9 | <br />

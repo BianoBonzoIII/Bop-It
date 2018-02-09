@@ -8,7 +8,7 @@
 *For an n x n matrix, the worst-case execution time of our search method is O(n)*
 
 # Background 
-The Mechanics of our the algorithm: 
+The Mechanics of our algorithm: 
 1) start in the bottom left corner of the matrix
 2) if the value at that index is larger than the target, move up a row 
 3) Otherwise, move right across the column

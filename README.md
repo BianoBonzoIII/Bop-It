@@ -31,7 +31,7 @@ Our method get average returned the average time it takes for the search algorit
 3) Repeat step 2 on each matrix with size increasing by 100, up to 10,000. 
 
 # Results
-
+![alt text](screenshots/result.png "")
 
 # Conclusion
 Based on our results, we can conclude that the algorithm is indeed O(n) runtime. As the size of the 

@@ -9,15 +9,15 @@
 
 # Background 
 The Mechanics of our algorithm: 
-1) start in the bottom left corner of the matrix
-2) if the value at that index is larger than the target, move up a row 
+1) Start in the bottom left corner of the matrix
+2) If the value at that index is larger than the target, move up a row 
 3) Otherwise, move right across the column
 4) Repeat steps 2-3 on whatever element it is currently on, until the target is found, then return the coordinates of the vaule
 5) If not, return (-1,-1)
 
 # Experiment methodology
 For our experiment, we wanted to test the runtime of our algorithm as the n x n matrix increases in size. 
-First, We created two methods, populate and getAverage. Method populate fills a matrix with consecutive integers 
+First, we created two methods, populateArray() and getAverage(). Method populate fills a matrix with consecutive integers 
 increasing by 1, starting at 1. 
 
 For example, in a 3 x 3 matrix, the elements would be <br />

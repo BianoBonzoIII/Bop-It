@@ -16,9 +16,9 @@ The Mechanics of Our Algorithm:
 5) If not, return (-1,-1)
 
 
-Let x = size of the matrix
-Best Case: Target is at the bottom left corner; (array[x-1][0])
-Worst Case: Target is at top right corner; (array[0][x-1])
+Let x = size of the matrix <br />
+Best Case: Target is at the bottom left corner; (array[x-1][0]) <br />
+Worst Case: Target is at top right corner; (array[0][x-1]) <br />
 For the purposes of our experiment, we also defined a middle case to be (array[x/2][x/2]) which is roughly the center of the matrix.
 
 # Experiment methodology
@@ -42,7 +42,7 @@ Procedure:
 
 
 # Results
-![alt text](screenshots/result.png "")
+![alt text](screenshots/result.png "") <br />
 Link to GoogleSheets: https://docs.google.com/spreadsheets/d/1Yr_G6eNgB9Mb6IuLTP8lBSbK6iTulzi0MC4QCRFjxJg/edit?usp=sharing
 
 # Discussions and Sources of Error
